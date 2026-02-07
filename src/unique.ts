@@ -3,6 +3,11 @@
  *
  * @param array - The array to deduplicate.
  * @returns A new array containing only the first occurrence of each value.
+ *
+ * @example
+ * ```typescript
+ * unique([1, 2, 2, 3, 1]); // [1, 2, 3]
+ * ```
  */
 export default function unique<T>(array: T[]): T[] {
   // NOTE: This benchmarks significantly better than `return [...new Set(array)]`.

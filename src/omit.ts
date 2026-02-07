@@ -4,6 +4,11 @@
  * @param object - The source object to omit keys from.
  * @param omitted - A key or array of keys to exclude from the result.
  * @returns A new object containing all entries from `object` except those with keys in `omitted`.
+ *
+ * @example
+ * ```typescript
+ * omit({ a: 1, b: 2, c: 3 }, ['a', 'c']); // { b: 2 }
+ * ```
  */
 export default function omit(
   object: Record<PropertyKey, unknown>, omitted: PropertyKey | PropertyKey[]
