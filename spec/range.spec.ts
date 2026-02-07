@@ -10,11 +10,31 @@ describe('range', () => {
     expect(range(2, 5)).toEqual([2, 3, 4]);
   });
 
+  it('generates a range with negative numbers', () => {
+    expect(range(-3, 2)).toEqual([-3, -2, -1, 0, 1]);
+  });
+
   it('returns an empty array when start equals end', () => {
     expect(range(3, 3)).toEqual([]);
   });
 
   it('returns an empty array when called with 0', () => {
     expect(range(0)).toEqual([]);
+  });
+
+  it('throws a RangeError when start is greater than end', () => {
+    expect(() => range(5, 2)).toThrow(RangeError);
+  });
+
+  it('throws a TypeError for non-integer arguments', () => {
+    expect(() => range(1.5)).toThrow(TypeError);
+  });
+
+  it('throws a TypeError for NaN', () => {
+    expect(() => range(Number.NaN)).toThrow(TypeError);
+  });
+
+  it('throws a TypeError for Infinity', () => {
+    expect(() => range(Number.POSITIVE_INFINITY)).toThrow(TypeError);
   });
 });
