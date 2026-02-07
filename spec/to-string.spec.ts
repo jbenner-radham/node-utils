@@ -11,6 +11,7 @@ describe('toString', () => {
   });
 
   it('converts undefined to a string', () => {
+    // @ts-expect-error No argument provided purposely.
     expect(toString()).toBe('undefined');
   });
 
