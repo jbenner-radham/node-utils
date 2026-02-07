@@ -19,7 +19,7 @@ Executes a function and returns its result, or `undefined` if it throws.
 import { attempt } from '@radham/utils';
 
 attempt(() => JSON.parse('{"a":1}')); // { a: 1 }
-attempt(() => JSON.parse('invalid'));  // undefined
+attempt(() => JSON.parse('invalid')); // undefined
 ```
 
 ### capitalize
@@ -52,8 +52,20 @@ Checks whether the given value is a number.
 ```typescript
 import { isNumber } from '@radham/utils';
 
-isNumber(42);    // true
-isNumber('42');  // false
+isNumber(42);   // true
+isNumber('42'); // false
+```
+
+### isPlainObject
+
+Checks whether the given value is a plain object.
+
+```typescript
+import { isPlainObject } from '@radham/utils';
+
+isPlainObject({ a: 1 });  // true
+isPlainObject([1, 2, 3]); // false
+isPlainObject(null);      // false
 ```
 
 ### isString
@@ -75,7 +87,7 @@ Creates a new object with the specified keys omitted.
 import { omit } from '@radham/utils';
 
 omit({ a: 1, b: 2, c: 3 }, ['a', 'c']); // { b: 2 }
-omit({ a: 1, b: 2 }, 'a');               // { b: 2 }
+omit({ a: 1, b: 2 }, 'a');              // { b: 2 }
 ```
 
 ### toString
