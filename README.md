@@ -93,6 +93,17 @@ omit({ a: 1, b: 2, c: 3 }, ['a', 'c']); // { b: 2 }
 omit({ a: 1, b: 2 }, 'a');              // { b: 2 }
 ```
 
+### range
+
+Creates an array of numbers from `start` (inclusive) to `end` (exclusive).
+
+```typescript
+import { range } from '@radham/utils';
+
+range(4);    // [0, 1, 2, 3]
+range(2, 5); // [2, 3, 4]
+```
+
 ### toString
 
 Converts a value to its string representation.
