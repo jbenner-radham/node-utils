@@ -1,4 +1,4 @@
-import { toString } from '../src/to-string.js';
+import toString from '../src/to-string.js';
 import { describe, expect, it } from 'vitest';
 
 describe('toString', () => {

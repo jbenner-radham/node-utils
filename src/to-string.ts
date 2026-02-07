@@ -10,6 +10,6 @@
  * toString(null); // 'null'
  * ```
  */
-export function toString(value: unknown): string {
+export default function toString(value: unknown): string {
   return value?.toString?.() ?? String(value);
 }
