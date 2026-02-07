@@ -25,5 +25,6 @@ export default function isPlainObject(value: unknown): value is Record<PropertyK
     return false;
   }
 
+  // This is needed for `Atomics`, `Intl`, `JSON`, `Math`, and `Reflect`.
   return !Object.hasOwn(value, Symbol.toStringTag);
 }
