@@ -52,8 +52,10 @@ Checks whether the given value is a number.
 ```typescript
 import { isNumber } from '@radham/utils';
 
-isNumber(42);   // true
-isNumber('42'); // false
+isNumber(42);                       // true
+isNumber('42');                     // false
+isNumber(NaN);                      // true
+isNumber(NaN, { rejectNaN: true }); // false
 ```
 
 ### isPlainObject

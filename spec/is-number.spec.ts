@@ -17,4 +17,12 @@ describe('isNumber', () => {
   it('returns false for undefined', () => {
     expect(isNumber()).toBe(false);
   });
+
+  it('returns false for NaN when rejectNaN is true', () => {
+    expect(isNumber(Number.NaN, { rejectNaN: true })).toBe(false);
+  });
+
+  it('returns true for a number when rejectNaN is true', () => {
+    expect(isNumber(42, { rejectNaN: true })).toBe(true);
+  });
 });
