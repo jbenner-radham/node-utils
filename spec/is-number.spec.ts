@@ -18,11 +18,19 @@ describe('isNumber', () => {
     expect(isNumber()).toBe(false);
   });
 
-  it('returns false for NaN when rejectNaN is true', () => {
-    expect(isNumber(Number.NaN, { rejectNaN: true })).toBe(false);
+  it('returns true for a finite number when finite is true', () => {
+    expect(isNumber(42, { finite: true })).toBe(true);
   });
 
-  it('returns true for a number when rejectNaN is true', () => {
-    expect(isNumber(42, { rejectNaN: true })).toBe(true);
+  it('returns false for NaN when finite is true', () => {
+    expect(isNumber(Number.NaN, { finite: true })).toBe(false);
+  });
+
+  it('returns false for Infinity when finite is true', () => {
+    expect(isNumber(Number.POSITIVE_INFINITY, { finite: true })).toBe(false);
+  });
+
+  it('returns false for -Infinity when finite is true', () => {
+    expect(isNumber(Number.NEGATIVE_INFINITY, { finite: true })).toBe(false);
   });
 });
