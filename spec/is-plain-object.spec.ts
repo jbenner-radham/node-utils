@@ -25,4 +25,28 @@ describe('isPlainObject', () => {
   it('returns false for a class instance', () => {
     expect(isPlainObject(new Date())).toBe(false);
   });
+
+  it('returns false for the Array object', () => {
+    expect(isPlainObject(Array)).toBe(false);
+  });
+
+  it('returns false for the Atomics object', () => {
+    expect(isPlainObject(Atomics)).toBe(false);
+  });
+
+  it('returns false for the Intl object', () => {
+    expect(isPlainObject(Intl)).toBe(false);
+  });
+
+  it('returns false for the JSON object', () => {
+    expect(isPlainObject(JSON)).toBe(false);
+  });
+
+  it('returns false for the Math object', () => {
+    expect(isPlainObject(Math)).toBe(false);
+  });
+
+  it('returns false for the Reflect object', () => {
+    expect(isPlainObject(Reflect)).toBe(false);
+  });
 });
