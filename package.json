@@ -2,7 +2,12 @@
   "name": "@radham/utils",
   "version": "0.0.0",
   "description": "A small bespoke utility library.",
-  "keywords": [],
+  "keywords": [
+    "lib",
+    "library",
+    "utility",
+    "utilities"
+  ],
   "homepage": "https://github.com/jbenner-radham/node-utils#readme",
   "bugs": {
     "url": "https://github.com/jbenner-radham/node-utils/issues"
@@ -34,7 +39,6 @@
     "build": "duo-build",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "np": "np --no-publish",
     "prepare": "husky",
     "prepublishOnly": "pnpm run build",
     "spellcheck": "cspell --dot --gitignore .",
