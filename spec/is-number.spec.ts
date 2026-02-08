@@ -14,6 +14,10 @@ describe('isNumber', () => {
     expect(isNumber('42')).toBe(false);
   });
 
+  it('returns false for a bigint', () => {
+    expect(isNumber(5n)).toBe(false);
+  });
+
   it('returns false for undefined', () => {
     // @ts-expect-error No argument provided purposely.
     expect(isNumber()).toBe(false);

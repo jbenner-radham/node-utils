@@ -59,6 +59,26 @@ isNumber(NaN, { finite: true });      // false
 isNumber(Infinity, { finite: true }); // false
 ```
 
+### isNumberLike
+
+Checks whether the given value is a number or can be coerced to one.
+
+```typescript
+import { isNumberLike } from '@radham/utils';
+
+isNumberLike(42);                           // true
+isNumberLike('42');                         // true
+isNumberLike('3.14');                       // true
+isNumberLike('NaN');                        // true
+isNumberLike('NaN', { finite: true });      // false
+isNumberLike('Infinity', { finite: true }); // false
+isNumberLike('abc');                        // false
+isNumberLike(null);                         // false
+isNumberLike(1n);                           // false
+isNumberLike(1n, { bigint: true });         // true
+isNumberLike('1n', { bigint: true });       // true
+```
+
 ### isPlainObject
 
 Checks whether the given value is a plain object.

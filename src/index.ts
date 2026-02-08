@@ -2,6 +2,7 @@ export { default as attempt } from './attempt.js';
 export { default as capitalize } from './capitalize.js';
 export { default as compose } from './compose.js';
 export { default as isNumber } from './is-number.js';
+export { default as isNumberLike } from './is-number-like.js';
 export { default as isPlainObject } from './is-plain-object.js';
 export { default as isString } from './is-string.js';
 export { default as omit } from './omit.js';
