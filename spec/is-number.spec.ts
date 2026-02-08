@@ -15,6 +15,7 @@ describe('isNumber', () => {
   });
 
   it('returns false for undefined', () => {
+    // @ts-expect-error No argument provided purposely.
     expect(isNumber()).toBe(false);
   });
 
