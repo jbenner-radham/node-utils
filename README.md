@@ -7,7 +7,7 @@ Install
 -------
 
 ```shell
-npm install --save-dev @radham/utils
+npm install @radham/utils
 ```
 
 Usage
