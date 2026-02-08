@@ -6,7 +6,9 @@ A small bespoke utility library.
 Install
 -------
 
-...
+```shell
+npm install --save-dev @radham/utils
+```
 
 Usage
 -----
