@@ -126,6 +126,17 @@ range(4);    // [0, 1, 2, 3]
 range(2, 5); // [2, 3, 4]
 ```
 
+### sleep
+
+Returns a promise that resolves after the specified number of milliseconds.
+
+```typescript
+import { sleep } from '@radham/utils';
+
+await sleep(1_000); // Pauses execution for 1 second.
+await sleep();      // Yields to the event loop (0ms delay).
+```
+
 ### toString
 
 Converts a value to its string representation.

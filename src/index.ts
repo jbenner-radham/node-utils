@@ -7,5 +7,6 @@ export { default as isPlainObject } from './is-plain-object.js';
 export { default as isString } from './is-string.js';
 export { default as omit } from './omit.js';
 export { default as range } from './range.js';
+export { default as sleep } from './sleep.js';
 export { default as toString } from './to-string.js';
 export { default as unique } from './unique.js';
